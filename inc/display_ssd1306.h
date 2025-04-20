@@ -78,15 +78,13 @@ void print_display(){
     else if (y_pos == 21) y_pos = 20;
 
     // Verifica se o quadrado encostou nas bordas
-    bool tocou_borda = (
+    tocou_borda = (
         x_pos <= x_min || x_pos + QUAD_SIZE >= x_max ||
         y_pos <= y_min || y_pos + QUAD_SIZE >= y_max
     );    
 
-    // Toca buzzer enquanto se tocar na borda (exceto no estágio 0)
-    if (stage_retangulo != 0 && tocou_borda) {
-        gpio_put(BUZZER_PIN, 1);
-    } else gpio_put(BUZZER_PIN, 0);  // Silêncio
+    if (stage_retangulo != 0 && tocou_borda) buzzer_start_alarm(); // Se tiver alguma borda e a caixa 8x8 tocar a borda, aciona o buzzer
+    else buzzer_stop_alarm();   // Se não tocar na borda, desativa o buzzer
 
     // Desenha o quadrado 8x8 na posição calculada
     ssd1306_rect(&ssd, y_pos, x_pos, QUAD_SIZE, QUAD_SIZE, cor, cor);

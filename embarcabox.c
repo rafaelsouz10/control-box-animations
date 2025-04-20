@@ -21,7 +21,11 @@ int main() {
 
         //se o botão A for apertado, mostrará as funcionalides do box_8x8 
         if (acao_botao_A) {
+            //inicia a ação do botão A com o display limpo, animações e leds desligados (assim que voltar de uma ação do botão B)
             limpa_display();
+            off_animation();
+            gpio_put(LED_PIN_RED, 0);
+            gpio_put(LED_PIN_BLUE, 0);
 
             //Função para leitura do joystick e alternância das bordas com o botão do joystick
             controle_joystick_box();
