@@ -52,10 +52,12 @@ void npInit(uint pin) {
 /**
  * Atribui uma cor RGB a um LED.
  */
+#define BRILHO 0.05
+
 void npSetLED(const uint index, const uint8_t r, const uint8_t g, const uint8_t b) {
-  leds[index].R = r;
-  leds[index].G = g;
-  leds[index].B = b;
+  leds[index].R = (uint8_t)(r * BRILHO);
+  leds[index].G = (uint8_t)(g * BRILHO);
+  leds[index].B = (uint8_t)(b * BRILHO);
 }
 
 /**
