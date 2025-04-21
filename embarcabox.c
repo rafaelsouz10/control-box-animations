@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
+#include <inc/leds_rgb.h>
 #include <inc/config_btn.h>
 #include <inc/display_ssd1306.h>
 #include <inc/joystick.h>
@@ -24,8 +25,7 @@ int main() {
             //inicia a ação do botão A com o display limpo, animações e leds desligados (assim que voltar de uma ação do botão B)
             limpa_display();
             off_animation();
-            gpio_put(LED_PIN_RED, 0);
-            gpio_put(LED_PIN_BLUE, 0);
+            off_leds();
 
             //Função para leitura do joystick e alternância das bordas com o botão do joystick
             controle_joystick_box();

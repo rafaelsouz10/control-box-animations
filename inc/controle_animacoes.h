@@ -21,7 +21,7 @@ void animacoes(int num_animacao, int duration){
     else if (num_animacao == 1) {
         printf("%d - Animacação Desligada.\n", num_animacao);
         display_animacao_suspensa();
-        gpio_put(LED_PIN_RED, 1);
+        gpio_put(LED_PIN_GREEN, 1);
         gpio_put(LED_PIN_BLUE, 0);
         off_animation();
     }
@@ -29,12 +29,12 @@ void animacoes(int num_animacao, int duration){
         printf("%d - Animação Relógio.\n", num_animacao);
         display_animacao_relogio();
         gpio_put(LED_PIN_BLUE, 1);
-        gpio_put(LED_PIN_RED, 0);
+        gpio_put(LED_PIN_GREEN, 0);
         clock_animation(duration);
     }
     else if (num_animacao == 3) {
         printf("%d - Animacação Desligada.\n", num_animacao);
-        gpio_put(LED_PIN_RED, 1);
+        gpio_put(LED_PIN_GREEN, 1);
         gpio_put(LED_PIN_BLUE, 0);
         display_animacao_suspensa();
         off_animation();
@@ -42,13 +42,13 @@ void animacoes(int num_animacao, int duration){
     else if (num_animacao == 4) {
         printf("%d - Animacação Copo de Cerveja.\n", num_animacao);
         gpio_put(LED_PIN_BLUE, 1);
-        gpio_put(LED_PIN_RED, 0);
+        gpio_put(LED_PIN_GREEN, 0);
         display_animacao_cerveja();
         beer_animation(duration);
     
     } else if (num_animacao == 5){
         printf("%d - Animacação Desligada.\n", num_animacao);
-        gpio_put(LED_PIN_RED, 1);
+        gpio_put(LED_PIN_GREEN, 1);
         gpio_put(LED_PIN_BLUE, 0);
         display_animacao_suspensa();
         off_animation();

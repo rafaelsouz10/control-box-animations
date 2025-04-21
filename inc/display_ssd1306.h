@@ -83,8 +83,13 @@ void print_display(){
         y_pos <= y_min || y_pos + QUAD_SIZE >= y_max
     );    
 
-    if (stage_retangulo != 0 && tocou_borda) buzzer_start_alarm(); // Se tiver alguma borda e a caixa 8x8 tocar a borda, aciona o buzzer
-    else buzzer_stop_alarm();   // Se não tocar na borda, desativa o buzzer
+    if (stage_retangulo != 0 && tocou_borda) {
+        gpio_put(LED_PIN_RED, 1);
+        buzzer_start_alarm(); // Se tiver alguma borda e a caixa 8x8 tocar a borda, aciona o buzzer
+    } else {
+        gpio_put(LED_PIN_RED, 0);
+        buzzer_stop_alarm();   // Se não tocar na borda, desativa o buzzer
+    }
 
     // Desenha o quadrado 8x8 na posição calculada
     ssd1306_rect(&ssd, y_pos, x_pos, QUAD_SIZE, QUAD_SIZE, cor, cor);
