@@ -40,6 +40,8 @@ void gpio_irq_handler(uint gpio, uint32_t events){
       acao_botao_A = true;
       acao_botao_B = false;
 
+      num_animacao = -1;
+
     } else if (gpio == BTN_B) {
       acao_botao_B = true; 
       acao_botao_A = false;
