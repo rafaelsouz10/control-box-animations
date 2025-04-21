@@ -120,10 +120,15 @@ Neste modo, o quadrado é movimentado pelo joystick no display OLED. O botão do
 Ao pressionar o botão B, o sistema entra em modo de animações. Cada clique alterna entre os seguintes estados: 
 
 **Animação Cobrinha** – o display mostra “ANIMACAO COBRINHA” e liga o Led RGB Azul;
+
 **Suspensão da animação** - display mostra “ANIMACAO SUSPENSA” e liga o Led RGB Verde;
+
 **Animação Relógio** – display mostra “ANIMACAO RELOGIO” e liga o Led RGB Azul;
+
 **Suspensão novamente**;
+
 **Animação Cerveja** – display mostra “ANIMACAO CERVEJA” e liga o Led RGB Azul;
+
 **Suspensão novamente**.
 
 ---
