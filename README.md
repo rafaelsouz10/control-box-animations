@@ -6,7 +6,7 @@
 
 Projeto tem como objetivo desenvolver um sistema na placa BitDogLab para a segunda fase do **EmbarcaTech**, permitindo ao usuário controlar a movimentação de um quadrado 8x8 no display OLED por meio de um joystick, com feedback sonoro e visual, além de alternar entre diferentes animações exibidas em uma matriz de LEDs.
 
-imagem vai aqui
+![image](https://github.com/user-attachments/assets/92f493d1-2457-4427-b0d5-d5cf52335343)
 
 ---
 
@@ -130,4 +130,4 @@ Ao pressionar o botão B, o sistema entra em modo de animações. Cada clique al
 
 ### 8. Vídeo Demonstrativo
 
-Click [AQUI](O lindo do vídeo irá aqui) para acessar o link do Vídeo Ensaio
+Click [AQUI](https://drive.google.com/file/d/1NZdzw5Du4WLmz_Zdit2E3Bd0f86hzapV/view?usp=sharing) para acessar o link do Vídeo Ensaio
